@@ -30,6 +30,10 @@ end primeiroTesteADC;
 
 architecture behavioral of primeiroTesteADC is -- EH BEHAVIORAL MESMO?
 	-----------------
+	constant tWHconv	: time := 20 ns; 	-- min 20ns
+	constant tconv		: time := 1.6 us; -- 1.3 a 1.6 us
+	constant tHconvst	: time := 20 ns; 	-- min 20ns
+	-----------------
 	signal contador1	: natural range 0 to 50000000;
 	signal contador2	: natural range 0 to 50000000;
 	signal clk_25mhz	: std_logic;
@@ -68,6 +72,7 @@ begin
 		end if;
 	end if;
 	end process;
+	-----------------
 end behavioral;
 
 
